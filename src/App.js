@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import Topbar from "./components/topbar/topbar";
+import Register from "./pages/Register/Register";
+import Home from "./pages/home/Home";
+import Login from "./pages/login/Login";
+import Settings from "./pages/settings/Settings";
+import Single from "./pages/single/Single";
+import Write from "./pages/write/Write";
+import { Routes, Route } from "react-router-dom";
+
+// thisis global
 
 function App() {
+  const user = false;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Topbar />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/register" element={user ? <Home /> : <Register />} />
+        <Route path="/login" element={user ? <Home /> : <Login />} />
+        <Route path="/Settings" element={user ? <Settings /> : <Register />} />
+        <Route path="/Post/:postId" element={<Single />} />
+        <Route path="/Write" element={user ? <Write /> : <Register />} />
+      </Routes>
+    </>
   );
 }
 
