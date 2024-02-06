@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/anandjayan/blogjan/static/css/main.5d4be427.css",
+    "main.js": "/anandjayan/blogjan/static/js/main.c3b138e2.js",
+    "index.html": "/anandjayan/blogjan/index.html",
+    "main.5d4be427.css.map": "/anandjayan/blogjan/static/css/main.5d4be427.css.map",
+    "main.c3b138e2.js.map": "/anandjayan/blogjan/static/js/main.c3b138e2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5d4be427.css",
+    "static/js/main.c3b138e2.js"
+  ]
+}
